@@ -1,10 +1,13 @@
 # volgtijdelijkheid-informatica
-Overzicht welke vakken je behaald moet hebben (of minstens 8/20) om een ander vak op te nemen binnnen informatica aan de UAntwerpen. Indien er geen label bijstaat, is de vereiste om min. 8/20 behaald te hebben. 
+Overzicht welke vakken je behaald moet hebben (of minstens 8/20) om een ander vak op te nemen binnnen informatica aan de UAntwerpen.
 
 ![volgtijdelijkheidsgraaf](informatica.png)
 
+## Legende
+Een pijl van A -> B betekent dat je A moet gedaan hebben voor B. De voorwaarde staat op de edge. Indien er geen label bijstaat, is de vereiste om min. 8/20 behaald te hebben. Ieder vak heeft zijn eigen kleur. Sorry voor het gebruik van lichte kleuren, het maakt het toch iets overzichtelijker dan alleen maar zwarte lijnen (je kan ```informatica.dot``` ook openen in xdot om over nodes te hoveren, zodat alle edges rood worden).
+
 ## Disclaimer
-Deze graaf kan fouten bevatten. Check steeds Sisa voor de meest up to date versie zonder menselijke fouten. Deze versie is gemaakt op 14 februari 2021. Sorry voor het gebruik van lichte kleuren, het maakt het toch iets overzichtelijker dan alleen maar zwarte lijnen (je kan ```informatica.dot``` ook openen in xdot om over nodes te hoveren, zodat alle edges rood worden).
+Deze graaf kan fouten bevatten. Check steeds Sisa voor de meest up to date versie zonder menselijke fouten. Deze versie is gemaakt op 14 februari 2021. 
 
 ## Source
 De info is gehaald van Sisa > Studieprogramma > Inschrijven via modeltraject > Kies een vak > Meer details > Inschrijvingsgegevens > Vereiste
