@@ -1,0 +1,150 @@
+digraph G {
+    compound=true;
+    rankdir=LR;
+    splines = ortho; // ortho
+
+
+    subgraph cluster_BA1 {
+        rank = same;
+        label="BA1";
+        graph[style=solid];
+        BA1 [style=invis];
+
+        CSA [label = "Computersys. en -architectuur"];
+        CG [label = "Computer graphics"];
+        GAS [label = "Gegevensabstractie en -structuren"];
+        PSE [label = "Project Software Engineering"];
+        TNA [label = "Talen en automaten"];
+        IP [label = "Inleiding Programmeren"];
+        CALC [label = "Calculus"];
+        DW [label = "Discrete Wiskunde"];
+
+        IP -> CG [label = "min. 8/20 of ingeschreven in bachelor informatica", color=red];
+
+    }
+
+    subgraph cluster_BA2 {
+        rank=same;
+        label="BA2";
+        graph[style=solid];
+        BA2 [style=invis];
+
+        ALC [label = "Algoritmen en complexiteit"];
+        CN [label = "Computernetwerken"]
+        COP [label = "Compilers"];
+        GP [label = "Gevorderd programmeren"];
+        MAB [label = "Machines en berekenbaarheid"];
+        UIT [label = "Uitbatingssystemen"];
+        PPDB [label = "Programming project databases"];
+        IDB [label = "Introduction to databases"];
+        ES [label = "Elementaire statistiek"];
+        LA [label = "Lineaire ALgebra"];
+        NA [label = "Numerieke Analyse"];
+
+        DW -> ALC [label = "", color=orange];
+        TNA -> ALC [label = "", color=orange];
+        GAS -> ALC [label = "", color=orange];
+
+        DW -> CN [label = "", color=yellow];
+        CSA -> CN [label = "", color=yellow];
+        CALC -> CN [label = "", color=yellow];
+
+        CSA -> COP [label = "", color=green];
+        TNA -> COP [label = "", color=green];
+        GAS -> COP [label = "", color=green];
+
+        IP -> GP [label = "", color=purple];
+        CSA -> GP [label = "", color=purple];
+        PSE -> GP [label = "", color=purple];
+        CG -> GP [label = "", color=purple];
+
+        TNA -> MAB [label = "", color=orchid]
+
+        CSA -> UIT [label = "", color=gold]
+
+        IDB -> PPDB [label = "ingeschreven of gehaald", color=seagreen]
+
+        GAS -> IDB [label = "min. 8/20 of ingeschreven in eduma wetenschap & technologie", color=sienna]
+
+        CALC -> ES [label = "", color=indigo]
+    }
+
+    subgraph cluster_BA3 {
+        rank=same;
+        label="BA3";
+        graph[style=solid];
+        BA3 [style=invis];
+
+        subgraph cluster_verplichtBA3{
+            label="Verplicht"
+            graph[style=dotted]
+
+            DS [label = "Distributed Systems"];
+            SE [label = "Software Engineering"];
+            WP [label = "Wetenschappelijk programmeren"];
+            AI [label = "Artificial Intelligence"];
+            BE [label = "Bachelor Eindwerk"];
+            DAG [label = "Datastructuren en graafalgoritmen"];
+            TC [label = "Telecommunicatiesystemen"];
+            TCP [label = "Telecommunicatiesystemen project"];
+
+            BA1 -> DS [ltail = cluster_BA1, color=red2];
+            GP -> DS [label = "", color=red2];
+
+            IDB -> SE [label = "ingeschreven of gehaald", color=orange2];
+            BA1 -> SE [ltail = cluster_BA1, color=orange2];
+
+            GP -> WP [label = "", color=yellow2];
+            LA -> WP [label = "", color=yellow2];
+            NA -> WP [label = "", color=yellow2];
+            BA1 -> WP [ltail = cluster_BA1, color=yellow2];
+
+            BA1 -> AI [ltail = cluster_BA1, color=green2];
+
+            BA1 -> BE [ltail = cluster_BA1, color=slateblue2];
+            PPDB -> BE [label = "", color=slateblue2];
+            COP -> BE [label = "", color=slateblue2];
+            SE -> BE [label = "ingeschreven of gehaald", color=slateblue2];
+            TC -> BE [label = "ingeschreven of gehaald", color=slateblue2];
+            DS -> BE [label = "ingeschreven of gehaald", color=slateblue2];
+
+            BA1 -> DAG [ltail = cluster_BA1, color=purple2];
+
+            GP -> TC [label = "", color=tan2];
+            CN -> TC [label = "", color=tan2];
+            BA1 -> TC [ltail = cluster_BA1, color=tan2];
+
+            GP -> TCP [label = "", color=tomato2];
+            BA1 -> TCP [ltail = cluster_BA1, color=tomato2];
+        }
+
+        subgraph cluster_keuzeBA3{
+            label="Keuze"
+            graph[style=dotted]
+
+            KORF [label = "Korfverbredend vak"];
+            EC [label = "Economie"];
+            FYS [label = "Fysica"];
+            ICB [label = "Inleiding tot computationele b"];
+            IPRO [label = "Individueel project"];
+            LCN [label = "Labo Computernetwerken"];
+            TL [label = "Toegepaste Logica"];
+            CT [label = "Codetheorie"];
+
+
+            IP -> ICB [label = "", color=olivedrab1];
+            DW -> ICB [label = "", color=olivedrab1];
+            CALC -> ICB [label = "", color=olivedrab1];
+            LA -> ICB [label = "", color=olivedrab1];
+
+            CN -> LCN [label = "", color=peachpuff];
+
+            MAB -> TL [label = "", color=pink1];
+
+            LA -> CT [label = "ingeschreven of gehaald", color=salmon];
+        }
+
+    }
+
+
+}
